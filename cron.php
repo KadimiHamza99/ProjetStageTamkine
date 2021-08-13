@@ -3,6 +3,6 @@
         'artisan',
         'schedule:work',
     ];
-    require __DIR__;
+    require __DIR__.'/artisan';
 ?>
 
