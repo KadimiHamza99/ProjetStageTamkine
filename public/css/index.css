@@ -1,0 +1,77 @@
+h5
+{
+  font-size:1.3em;
+}
+
+/* End Non-Essential  */
+
+.property-card
+{
+  height:18em;
+  width:16em;
+  display:flex;
+  flex-direction:column;
+  position:relative;
+  transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+  border-radius:6px;
+  overflow:hidden;
+  box-shadow:  5px 5px 7px #e1e1e3, -5px -5px 7px #ffffff;
+}
+/* ^-- The margin bottom is necessary for the drop shadow otherwise it gets clipped in certain cases. */
+
+/* Top Half of card, image. */
+
+.property-image
+{
+  height:6em;
+  width:16em;
+  position:Absolute;
+  top:0px;
+  transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+  background-size:cover;
+  background-repeat:no-repeat;
+}
+
+/* Bottom Card Section */
+
+.property-description
+{
+  background-color: #FAFAFC;
+  height:12em;
+  width:16em;
+  position:absolute;
+  bottom:0em;
+  transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+  padding: 1em;
+  text-align:center;
+}
+
+/* Social Icons */
+
+.property-social-icons
+{
+  width:1em;
+  height:1em;
+  background-color:black;
+  position:absolute;
+  bottom:1em;
+  left:1em;
+  transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+/* Property Cards Hover States */
+
+.property-card:hover .property-description
+{
+  height:0em;
+  padding:0px 1em;
+}
+.property-card:hover .property-image
+{
+  height:18em;
+}
+
+.property-card:hover .property-social-icons:hover
+{
+  cursor:pointer;
+}
