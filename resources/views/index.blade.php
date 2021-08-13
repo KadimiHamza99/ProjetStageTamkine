@@ -10,7 +10,7 @@
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link rel="stylesheet" href="{{ asset('css/index.css') }}">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <meta http-equiv="refresh" content="10">
+    <meta http-equiv="refresh" content="600"> <!-- actualiser la page chaque 10min -->
     {{-- <div style="text-align: center"><button class="btn btn-primary btn-sm"><a href="{{ route('live_search.index') }}" style="color: white;text-decoration: none;">Search</a></button></div> --}}
     <div style="text-align:center" >
         <button type="button" class="btn btn-outline-success btn-sm"><a href="{{ route('live_search.index') }}" style="color:#36473a ;text-decoration: none;"><b>Search</b></a></button>

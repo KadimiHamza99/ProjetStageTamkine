@@ -1,21 +1,20 @@
 h5
 {
-  font-size:1.3em;
+    font-size:1.3em;
 }
 
 /* End Non-Essential  */
 
 .property-card
 {
-  height:18em;
-  width:16em;
-  display:flex;
-  flex-direction:column;
-  position:relative;
-  transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
-  border-radius:6px;
-  overflow:hidden;
-  box-shadow:  5px 5px 7px #e1e1e3, -5px -5px 7px #ffffff;
+    height:15em;
+    width:16em;
+    position:relative;
+    transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+    border-radius:10px;
+    overflow:hidden;
+    box-shadow:  5px 5px 7px #c1e4c162, -5px -5px 7px #ac8e8e49;
+    margin-bottom: 1.2em;
 }
 /* ^-- The margin bottom is necessary for the drop shadow otherwise it gets clipped in certain cases. */
 
@@ -23,55 +22,55 @@ h5
 
 .property-image
 {
-  height:6em;
-  width:16em;
-  position:Absolute;
-  top:0px;
-  transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
-  background-size:cover;
-  background-repeat:no-repeat;
+    height:6em;
+    width:16em;
+    position:Absolute;
+    top:0px;
+    transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+    background-size:cover;
+    background-repeat:no-repeat;
 }
 
 /* Bottom Card Section */
 
 .property-description
 {
-  background-color: #FAFAFC;
-  height:12em;
-  width:16em;
-  position:absolute;
-  bottom:0em;
-  transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
-  padding: 1em;
-  text-align:center;
+    background-color: #FAFAFC;
+    height:8.7em;
+    width:16em;
+    position:absolute;
+    bottom:0em;
+    transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+    padding: 1em;
+    text-align:center;
 }
 
 /* Social Icons */
 
 .property-social-icons
 {
-  width:1em;
-  height:1em;
-  background-color:black;
-  position:absolute;
-  bottom:1em;
-  left:1em;
-  transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+    width:1em;
+    height:1em;
+    background-color:black;
+    position:absolute;
+    bottom:1em;
+    left:1em;
+    transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
 }
 
 /* Property Cards Hover States */
 
 .property-card:hover .property-description
 {
-  height:0em;
-  padding:0px 1em;
+    height:0em;
+    padding:0px 1em;
 }
 .property-card:hover .property-image
 {
-  height:18em;
+    height:18em;
 }
 
 .property-card:hover .property-social-icons:hover
 {
-  cursor:pointer;
+    cursor:pointer;
 }
