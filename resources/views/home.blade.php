@@ -57,6 +57,6 @@
             @endforeach
         @endif
         </div>
-        {{ $datas->links('pagination::bootstrap-4') }}
+        {{ $datas->links('pagination::simple-bootstrap-4') }}
     </div>
 @endsection
