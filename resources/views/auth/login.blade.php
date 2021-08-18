@@ -1,11 +1,17 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap" rel="stylesheet">
+<div class="container" style="color: white;font-family:Space Grotesk,'sans-serif';margin-top:9em;margin-bottom:9em" >
     <div class="row justify-content-center">
         <div class="col-md-8">
-            <div class="card">
-                <div class="card-header">{{ __('Login') }}</div>
+            <div class="card"  style="background-color: #394965">
+                <div class="card-header" style="background-color: #31558F">
+                    {{ __('Login') }}
+                    <a class="navbar-brand" href="{{ url('/') }}" style="float: right;padding:0;margin:0;">
+                        <img src="{{ asset('images/back.png') }}" width="20">
+                    </a>
+                </div>
 
                 <div class="card-body">
                     <form method="POST" action="{{ route('login') }}">
@@ -40,7 +46,7 @@
                         </div>
                         <div class="form-group row mb-0">
                             <div class="col-md-8 offset-md-4">
-                                <button type="submit" class="btn btn-primary">
+                                <button type="submit" class="btn btn-secondary">
                                     {{ __('Login') }}
                                 </button>
 

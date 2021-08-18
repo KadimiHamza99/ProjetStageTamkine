@@ -1,28 +1,44 @@
 @extends('layouts.admin')
 
 @section('content')
-    <h3 class="tile-title">Creer Une Nouvelle Platform</h3>
-    {{-- @if ($errors->any())
-        @foreach ($errors as $error)
-            <li>{{ $error }}</li>
-        @endforeach
-    @endif --}}
-    <form class="row" action="{{ route('platforms.store') }}" method="post" enctype="multipart/form-data">
-        @csrf
-        <div class="form-group col-md-12">
-            <label class="control-label">Nom de la platform</label>
-            <input class="form-control" type="text" placeholder="platform TAMKINE" name="nom" value={{ old('nom') }}>
-        </div>
-        <div class="form-group col-md-12">
-            <label class="control-label">URL de la platform</label>
-            <input class="form-control" type="url" placeholder="https://tamkine.fondation.org" name="url" value={{ old('url') }}>
-        </div>
-        <div class="form-group col-md-12">
-            <label class="control-label">Logo de la platform</label>
-            <input class="form-control" type="file" name="logo" value= {{ old('logo') }}>
-        </div>
-        <div class="form-group col-md-4 align-self-end">
-            <input type="submit" value="Create" class="btn btn-primary">
-        </div>
-    </form>
+
+    <h3 style="color: white">{{ __('Create Platform') }}</h3>
+
+    <div class="card-body" style="color: white">
+        <form method="post" action="{{ route('platforms.store') }}" enctype="multipart/form-data">
+            @csrf
+
+            <div class="form-group row">
+                <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('Name') }}</label>
+
+                <div class="col-md-6">
+                    <input class="form-control" type="text" name="nom" value={{ old('nom') }}>
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('URL') }}</label>
+
+                <div class="col-md-6">
+                    <input class="form-control" type="url" name="url" value={{ old('url') }}>
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label for="password" class="col-md-4 col-form-label text-md-right">{{ __('Logo') }}</label>
+
+                <div class="col-md-6">
+                    <input class="form-control" type="file" name="logo" value= {{ old('logo') }}>
+                </div>
+            </div>
+
+            <div class="form-group row mb-0">
+                <div class="col-md-6 offset-md-4">
+                    <input type="submit" value="Create" class="btn btn-primary">
+                </div>
+            </div>
+        </form>
+    </div>
+
 @endsection
+

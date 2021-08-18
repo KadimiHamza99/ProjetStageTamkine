@@ -14,7 +14,7 @@ class ResponsablesController extends Controller
      */
     public function index()
     {
-        $datas = User::paginate(4);
+        $datas = User::paginate(5);
         return view('responsables.listeResponsables')->with('datas',$datas);
     }
 

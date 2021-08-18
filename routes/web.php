@@ -16,8 +16,7 @@ Route::get('/','App\Http\Controllers\PlatformsController@index')->name('index');
 Route::get('/warning','App\Http\Controllers\PlatformsController@warning');
 
 //test live search
-Route::get('/live_search', 'App\Http\Controllers\LiveSearch@index')->name('live_search.index');
-Route::get('/live_search/action', 'App\Http\Controllers\LiveSearch@action')->name('live_search.action');
+
 
 
 Route::middleware(['auth'])->group(function(){
@@ -25,6 +24,8 @@ Route::middleware(['auth'])->group(function(){
     Route::get('/listePlatforms','App\Http\Controllers\PlatformsController@liste')->name('listePlatforms');
     Route::resource('/responsables','App\Http\Controllers\ResponsablesController');
     Route::get('/home','App\Http\Controllers\PlatformsController@nombre')->name('home');
+    Route::get('/live_search', 'App\Http\Controllers\LiveSearch@index')->name('live_search.index');
+    Route::get('/live_search/action', 'App\Http\Controllers\LiveSearch@action')->name('live_search.action');
 });
 Auth::routes();
 

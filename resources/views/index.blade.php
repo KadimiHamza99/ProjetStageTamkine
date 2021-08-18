@@ -1,101 +1,89 @@
-{{-- @extends('layouts.app') --}}
-@section('content')
-    <title>{{ config('app.name', 'Tamkine') }}</title>
+<!DOCTYPE HTML>
+<!--
+	Solid State by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Generic - Solid State by HTML5 UP</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
 
-    <!-- Fonts -->
-    <link rel="dns-prefetch" href="//fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+		<!-- Page Wrapper -->
+			<div id="page-wrapper">
 
-    <!-- Styles -->
-    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-    <link rel="stylesheet" href="{{ asset('css/index.css') }}">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <meta http-equiv="refresh" content="600"> <!-- actualiser la page chaque 10min -->
-    {{-- <div style="text-align: center"><button class="btn btn-primary btn-sm"><a href="{{ route('live_search.index') }}" style="color: white;text-decoration: none;">Search</a></button></div> --}}
-    <div style="text-align:center" >
-        <button type="button" class="btn btn-outline-success btn-sm"><a href="{{ route('live_search.index') }}" style="color:#36473a ;text-decoration: none;"><b>Search</b></a></button>
-        <button type="button" class="btn btn-outline-danger btn-sm"><a href="{{ route('login') }}" style="color:#620d0d ;text-decoration: none;"><b>Login</b></a></button>
-    </div>
-    <?php use App\Http\Controllers\PlatformsController; ?>
-    <div class="container" id="display" style="display: grid;margin-top:2%;grid-template-columns: repeat(4, 1fr);grid-auto-rows: minmax(100px, auto);">
-        @if (count($datas)>0)
-            <?php
-                // $u = 'localhost';
-                // $username = 'root';
-                // $password = '';
-                // $dbName = 'platformstamkine';
-                // $link=mysqli_connect($u, $username,$password,$dbName) or die('echec de connection');
-            ?>
-            @foreach ($datas as $data)
-            {{-- <script>
-                // $.get(url).done(function () {
-                //     alert("success");
-                // }).fail(function () {
-                //     alert("failed");
-                // });
-            </script> --}}
-            <?php
-                // $url=$data->url;
-                // $id=$data->id;
-                // $ch = curl_init($url);
-                // curl_setopt($ch,CURLOPT_CONNECTTIMEOUT,10);
-                // curl_setopt($ch,CURLOPT_HEADER,true);
-                // curl_setopt($ch,CURLOPT_NOBODY,true);
-                // curl_setopt($ch,CURLOPT_RETURNTRANSFER,true);
-                // // Récupérer la réponse
-                // $response = curl_exec($ch);
-                // // Fermer la session cURL
-                // curl_close($ch);
-                // if($response==true){
-                //     if($data->statut != 1){
-                //         $sqls="UPDATE platforms SET statut=1 WHERE id=$id";
-                //         mysqli_query($link,$sqls);
-                //     }
-                // }else if($response==false){
-                //     if($data->statut != 0){
-                //         $sqlf = "UPDATE platforms SET statut=0 WHERE id=$id";
-                //         mysqli_query($link,$sqlf);
-                //         $error=new PlatformsController();
-                //         $error->warning();
-                //     }
-                // }
-            ?>
-            <div class="container">
-                @if ($data->statut==1)
-                <div class="center">
-                    <div class="property-card">
-                        <a href="{{ $data->url }}">
-                        <div class="property-image" style="background-image:url('logos/{{ $data->logo }}');">
-                            <div class="property-image-title">
-                            <!-- Optional <h5>Card Title</h5> If you want it, turn on the CSS also. -->
-                            </div>
-                        </div></a>
-                    <div class="property-description" style="background-image: linear-gradient(to bottom, rgba(172, 245, 194, 0.5), rgba(138, 197, 138, 0.5))">
-                        <h5> {{ $data->nom }} </h5>
-                        <h6 style="color: #3d8850;margin:1.5em auto">Click To Visite Website</h6>
-                    </div>
-                    </div>
-                </div>
-                @endif
-                @if ($data->statut==0)
-                <div class="center">
-                    <div class="property-card">
-                        <a href="{{ $data->url }}">
-                        <div class="property-image" style="background-image:url('logos/{{ $data->logo }}');">
-                            <div class="property-image-title">
-                            <!-- Optional <h5>Card Title</h5> If you want it, turn on the CSS also. -->
-                            </div>
-                        </div></a>
-                    <div class="property-description" style="background-image: linear-gradient(to bottom, rgba(235, 175, 175, 0.746), rgba(236, 113, 113, 0.904))">
-                        <h5> {{ $data->nom }} </h5>
-                        <h6 style="color: #9e3636;margin:1.5em auto">Click To Visite Website</h6>
-                    </div>
-                    </div>
-                </div>
-                @endif
-            </div>
-            @endforeach
-        @endif
-        {{ $datas->links('pagination::bootstrap-4') }}
-    </div>
-{{-- @endsection --}}
+				<!-- Header -->
+					<header id="header">
+						<h1><a class="navbar-brand" href="{{ url('/') }}">
+                                Fondation Tamkine
+                            </a>
+                        </h1>
+						<nav>
+							<a href="{{ route('login') }}">Login</a>
+						</nav>
+					</header>
+				<!-- Wrapper -->
+					<section id="wrapper">
+						<header>
+							<div class="inner">
+								<h2>TAMKINE's DASHBOARD </h2>
+								<p> visualize the status of your platforms.</p>
+							</div>
+						</header>
+
+						<!-- Content -->
+							<div class="wrapper">
+								<div class="inner">
+
+									<h3 class="major">Administrators</h3>
+									<p>
+                                        <?php $admin=0; ?>
+                                        @foreach ($rows as $row)
+                                            <?php $admin++; ?>
+                                        @endforeach
+                                        <?php echo $admin; ?>
+                                    </p>
+                                    <h3 class="major">Platforms</h3>
+									<p>
+                                        <?php $platform=0; ?>
+                                        @foreach ($datas as $data)
+                                            <?php $platform++; ?>
+                                        @endforeach
+                                        <?php echo $platform; ?>
+                                    </p>
+
+								</div>
+							</div>
+					</section>
+
+				<!-- Footer -->
+					<section id="footer">
+						<div class="inner">
+							<h2 class="major">Get in touch</h2>
+							<ul class="contact">
+								<li class="icon solid fa-phone">+212 537 708 391</li>
+								<li class="icon solid fa-envelope">contact@tamkine.org</li>
+								<li class="icon brands fa-twitter">twitter.com/fondationtamki1</li>
+								<li class="icon brands fa-facebook-f">facebook.com/fondation.tamkine</li>
+								<li class="icon brands fa-instagram">instagram.com/fondation_tamkine/</li>
+							</ul>
+						</div>
+					</section>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>

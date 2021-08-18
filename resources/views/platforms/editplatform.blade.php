@@ -1,13 +1,13 @@
 @extends('layouts.admin')
 
 @section('content')
-    <h3 class="tile-title">Editer Une Platform</h3>
+    <h3 class="tile-title" style="color: white">Edit Platform</h3>
     {{-- @if ($errors->any())
         @foreach ($errors as $error)
             <li>{{ $error }}</li>
         @endforeach
     @endif --}}
-    <form class="row" action="{{ route('platforms.update',$platform->id) }}" method="post" enctype="multipart/form-data">
+    <form class="row" action="{{ route('platforms.update',$platform->id) }}" method="post" enctype="multipart/form-data" style="color: white">
         <input type="hidden" name="_method" value="PUT">
         @csrf
         <div class="form-group col-md-12">

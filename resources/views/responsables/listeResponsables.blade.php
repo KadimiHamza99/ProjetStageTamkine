@@ -1,15 +1,15 @@
 @extends('layouts.admin')
 
 @section('content')
-<div class="col-md-12">
-    <h3 class="tile-title">Platforms Details</h3>
+<div class="col-md-12" style="color: white">
+    <h3 class="tile-title">Administrators Details</h3>
     @if (session('msg'))
         <div class="alert alert-danger" role="alert">
             <strong>{{ session('msg') }}</strong>
         </div>
     @endif
     <div class="table-responsive">
-        <table class="table">
+        <table class="table" style="color: white">
         <thead>
             <tr>
                 <th class="col-md-3">Name</th>

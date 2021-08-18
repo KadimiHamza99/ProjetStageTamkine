@@ -18,14 +18,13 @@ class PlatformsController extends Controller
 
     public function warning(){
         Mail::to('hamza.kadimi@uit.ac.ma')->send(new Warning);
-        $datas = Platform::paginate(16);
+        $datas = Platform::paginate(9);
         return view('index')->with('datas',$datas);
     }
     public function nombre()
     {
-        $datas = Platform::all();
-        $rows=User::all();
-        return view('home',compact('datas','rows'));
+        $datas = Platform::paginate(6);
+        return view('home')->with('datas',$datas);
     }
 
     public function liste()
@@ -36,8 +35,9 @@ class PlatformsController extends Controller
 
     public function index()
     {
-        $datas = Platform::paginate(16);
-        return view('index')->with('datas',$datas);
+        $datas = Platform::all();
+        $rows = User::all();
+        return view('index',compact('datas','rows'));
     }
 
     /**

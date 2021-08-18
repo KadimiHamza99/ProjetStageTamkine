@@ -1,9 +1,9 @@
 @extends('layouts.admin')
 
 @section('content')
-                <h3>{{ __('Ajouter Un Administrateur') }}</h3>
+                <h3 style="color: white">{{ __('Create Admin') }}</h3>
 
-                <div class="card-body">
+                <div class="card-body" style="color: white">
                     <form method="POST" action="{{ route('responsables.store') }}">
                         @csrf
 
@@ -60,7 +60,7 @@
                         <div class="form-group row mb-0">
                             <div class="col-md-6 offset-md-4">
                                 <button type="submit" class="btn btn-danger">
-                                    {{ __('AJOUTER') }}
+                                    {{ __('ADD') }}
                                 </button>
                             </div>
                         </div>

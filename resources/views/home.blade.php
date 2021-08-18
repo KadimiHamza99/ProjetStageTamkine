@@ -1,54 +1,62 @@
 @extends('layouts.admin')
 
 @section('content')
-<div class="row">
-    <div class="col-md-6 col-lg-6">
-        <div class="widget-small primary coloured-icon"><i class="icon fa fa-users fa-3x"></i>
-            <div class="info">
-                <h5>Nombre de Responsables</h5>
-                <?php
-                    $j=0;
-                ?>
-                @if (count($rows)>0)
-                    @foreach ($rows as $row)
-                        <?php
-                            $j++;
-                        ?>
-                    @endforeach
+<title>{{ config('app.name', 'Tamkine') }}</title>
+
+    <!-- Fonts -->
+    <link rel="dns-prefetch" href="//fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+
+    <!-- Styles -->
+    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <link rel="stylesheet" href="{{ asset('css/index.css') }}">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <meta http-equiv="refresh" content="1800"> <!-- actualiser la page chaque 10min -->
+        <div class="container">
+        @if (count($datas)>0)
+            @foreach ($datas as $data)
+            {{-- <script>
+                // $.get(url).done(function () {
+                //     alert("success");
+                // }).fail(function () {
+                //     alert("failed");
+                // });
+            </script> --}}
+                @if ($data->statut==1)
+                <div class="center">
+                    <div class="property-card">
+                        <a href="{{ $data->url }}">
+                        <div class="property-image" style="background-image:url('logos/{{ $data->logo }}');">
+                            <div class="property-image-title">
+                            <!-- Optional <h5>Card Title</h5> If you want it, turn on the CSS also. -->
+                            </div>
+                        </div></a>
+                    <div class="property-description" style="background-image: linear-gradient(to bottom, rgba(172, 245, 194, 0.5), rgba(138, 197, 138, 0.5))">
+                        <h5> {{ $data->nom }} </h5>
+                        <h6 style="color: #3d8850;margin:1.5em auto">Click To Visite Website</h6>
+                    </div>
+                    </div>
+                </div>
                 @endif
-                <?php
-                    echo "<p><b>".$j."</b></p>";
-                ?>
-            </div>
-        </div>
-    </div>
-    <div class="col-md-6 col-lg-6">
-        <div class="widget-small danger coloured-icon"><i class="icon fa fa-star fa-3x"></i>
-            <div class="info">
-                <h5>Nombre de Platforms</h5>
-                <?php
-                    $i=0;
-                ?>
-                @if (count($datas)>0)
-                    @foreach ($datas as $data)
-                        <?php
-                            $i++;
-                        ?>
-                    @endforeach
+                @if ($data->statut==0)
+                <div class="center">
+                    <div class="property-card">
+                        <a href="{{ $data->url }}">
+                        <div class="property-image" style="background-image:url('logos/{{ $data->logo }}');">
+                            <div class="property-image-title">
+                            <!-- Optional <h5>Card Title</h5> If you want it, turn on the CSS also. -->
+                            </div>
+                        </div></a>
+                    <div class="property-description" style="background-image: linear-gradient(to bottom, rgba(235, 175, 175, 0.746), rgba(236, 113, 113, 0.904))">
+                        <h5> {{ $data->nom }} </h5>
+                        <h6 style="color: #9e3636;margin:1.5em auto">Click To Visite Website</h6>
+                    </div>
+                    </div>
+                </div>
                 @endif
-                <?php
-                    echo "<p><b>".$i."</b></p>";
-                ?>
-            </div>
+            @endforeach
+        @endif
         </div>
+        {{ $datas->links('pagination::bootstrap-4') }}
     </div>
-</div>
-<div class="container">
-    <p>
-        - Cette application permet à l'administrateur de gerer les platforms de la fondation TAMKINE (ajouter,supprimer et modifier) et par la suite , ces platforms vont subir à un test d'url et verifier si les platforms sont deja en ligne ou il y a un panne quelque part , et se test se fait d'une maniére automatique et l'administrateur n'a pas besoin d'actualiser la page à chaque fois .
-    </p>
-    <p>
-        -Et aussi l'application permet à l'administrateur de gérer d'autre responsables (ajouter,modifier et supprimer) qui peuvent gérer les platforms mais avec des privilèges limités .
-    </p>
-</div>
 @endsection

@@ -28,15 +28,7 @@
     <!-- Sidebar menu-->
     @include("admin.includes.sidebar")
     <main class="app-content">
-        <div class="row">
-            <div class="col-md-12">
-                <div class="tile">
-                    <div class="tile-body">
-                        @yield('content')
-                    </div>
-                </div>
-            </div>
-        </div>
+        @yield('content')
     </main>
     <!-- Essential javascripts for application to work-->
     <script src="{{ asset('admin/js/jquery-3.3.1.min.js') }}"></script>
