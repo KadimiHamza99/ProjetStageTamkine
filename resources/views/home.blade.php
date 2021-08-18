@@ -31,9 +31,9 @@
                             <!-- Optional <h5>Card Title</h5> If you want it, turn on the CSS also. -->
                             </div>
                         </div></a>
-                    <div class="property-description" style="background-image: linear-gradient(to bottom, rgba(172, 245, 194, 0.5), rgba(138, 197, 138, 0.5))">
+                    <div class="property-description" style="background-image: linear-gradient(to bottom, rgba(48, 121, 70, 0.787), rgba(83, 136, 83, 0.698))">
                         <h5> {{ $data->nom }} </h5>
-                        <h6 style="color: #3d8850;margin:1.5em auto">Click To Visite Website</h6>
+                        <h6 style="color: #aad3b4;margin:1.5em auto">Click To Visite Website</h6>
                     </div>
                     </div>
                 </div>
@@ -47,9 +47,9 @@
                             <!-- Optional <h5>Card Title</h5> If you want it, turn on the CSS also. -->
                             </div>
                         </div></a>
-                    <div class="property-description" style="background-image: linear-gradient(to bottom, rgba(235, 175, 175, 0.746), rgba(236, 113, 113, 0.904))">
+                    <div class="property-description" style="background-image: linear-gradient(to bottom, rgba(97, 31, 31, 0.609), rgba(160, 71, 71, 0.904))">
                         <h5> {{ $data->nom }} </h5>
-                        <h6 style="color: #9e3636;margin:1.5em auto">Click To Visite Website</h6>
+                        <h6 style="color: #e0b8b8;margin:1.5em auto">Click To Visite Website</h6>
                     </div>
                     </div>
                 </div>
