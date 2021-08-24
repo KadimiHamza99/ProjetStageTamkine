@@ -17,7 +17,7 @@ h5
     transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
     border-radius:10px;
     overflow:hidden;
-    box-shadow:  5px 5px 7px #21232e, -5px -5px 7px #2E3141;
+    box-shadow:  5px 5px 7px rgba(49, 85, 143, 0.349), -5px -5px 7px rgba(49, 85, 143, 0.342);
     margin-bottom: 1.2em;
 }
 /* ^-- The margin bottom is necessary for the drop shadow otherwise it gets clipped in certain cases. */

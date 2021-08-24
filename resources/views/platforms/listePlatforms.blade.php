@@ -12,8 +12,8 @@
         <table class="table" style="color: white">
         <thead>
             <tr>
-                <th class="col-md-2">Name</th>
-                <th class="col-md-1">Logo</th>
+                <th class="col-md-3">Name</th>
+                <th class="col-md-3">Logo</th>
                 <th class="col-md-3">URL</th>
                 <th class="col-md-1">Statut</th>
                 <th class="col-md-1">Update</th>
@@ -25,7 +25,7 @@
                 @foreach ($datas as $data)
                 <tr>
                     <td>{{ $data->nom }}</td>
-                    <td><img src="logos/{{ $data->logo }}" class="img-responsive" width="50"></td>
+                    <td><img src="logos/{{ $data->logo }}" class="img-responsive" width="70"></td>
                     <td>{{ $data->url }}</td>
                     <td>
                         @if ($data->statut==0)
