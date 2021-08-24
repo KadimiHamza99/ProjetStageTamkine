@@ -1,89 +1,175 @@
-<!DOCTYPE HTML>
-<!--
-	Solid State by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
-<html>
-	<head>
-		<title>Generic - Solid State by HTML5 UP</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-	</head>
-	<body class="is-preload">
+<!DOCTYPE html>
+<html lang="en">
 
-		<!-- Page Wrapper -->
-			<div id="page-wrapper">
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-				<!-- Header -->
-					<header id="header">
-						<h1><a class="navbar-brand" href="{{ url('/') }}">
-                                Fondation Tamkine
-                            </a>
-                        </h1>
-						<nav>
-							<a href="{{ route('login') }}">Login</a>
-						</nav>
-					</header>
-				<!-- Wrapper -->
-					<section id="wrapper">
-						<header>
-							<div class="inner">
-								<h2>TAMKINE's DASHBOARD </h2>
-								<p> visualize the status of your platforms.</p>
-							</div>
-						</header>
+  <title>Monitor</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
 
-						<!-- Content -->
-							<div class="wrapper">
-								<div class="inner">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
 
-									<h3 class="major">Administrators</h3>
-									<p>
-                                        <?php $admin=0; ?>
-                                        @foreach ($rows as $row)
-                                            <?php $admin++; ?>
-                                        @endforeach
-                                        <?php echo $admin; ?>
-                                    </p>
-                                    <h3 class="major">Platforms</h3>
-									<p>
-                                        <?php $platform=0; ?>
-                                        @foreach ($datas as $data)
-                                            <?php $platform++; ?>
-                                        @endforeach
-                                        <?php echo $platform; ?>
-                                    </p>
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 
-								</div>
-							</div>
-					</section>
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+ 
+  <link href="logos/academy.png" rel="apple-touch-icon">
 
-				<!-- Footer -->
-					<section id="footer">
-						<div class="inner">
-							<h2 class="major">Get in touch</h2>
-							<ul class="contact">
-								<li class="icon solid fa-phone">+212 537 708 391</li>
-								<li class="icon solid fa-envelope">contact@tamkine.org</li>
-								<li class="icon brands fa-twitter">twitter.com/fondationtamki1</li>
-								<li class="icon brands fa-facebook-f">facebook.com/fondation.tamkine</li>
-								<li class="icon brands fa-instagram">instagram.com/fondation_tamkine/</li>
-							</ul>
-						</div>
-					</section>
+</head>
 
-			</div>
+<body>
 
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top d-flex align-items-center">
+    <div class="container">
+        <div class="logo">
+          <h1 class="text-light" style="text-align: center"><span><img src="logos/academy.png" class="img-responsive" width="40"> Fondation TAMKINE</span></h1>
+          <!-- Uncomment below if you prefer to use an image logo -->
+          <!-- <a href="index.html"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+        </div>
+      </div><!-- End Header Container -->
+  </header><!-- End Header -->
 
-	</body>
+
+  <!-- ======= Hero Section ======= -->
+  <section id="hero" class="d-flex align-items-center">
+    <div class="container text-center position-relative" data-aos="fade-in" data-aos-delay="200">
+      <h1>MONITOR</h1>
+      <h2>Controll Your Platforms</h2>
+      <a href="{{ route('login') }}" class="btn-get-started scrollto">Login</a>
+    </div>
+  </section><!-- End Hero -->
+
+  <main id="main">
+
+    <!-- ======= Clients Section ======= -->
+    <section id="clients" class="clients">
+      <div class="container">
+
+        <div class="row">
+
+          <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center" data-aos="zoom-in" data-aos-delay="50">
+            <img src="assets/img/clients/client-1.png" class="img-fluid" alt="">
+          </div>
+
+          <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center" data-aos="zoom-in" data-aos-delay="100">
+            <img src="assets/img/clients/client-2.png" class="img-fluid" alt="">
+          </div>
+
+          <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center" data-aos="zoom-in" data-aos-delay="150">
+            <img src="assets/img/clients/client-3.png" class="img-fluid" alt="">
+          </div>
+
+          <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center" data-aos="zoom-in" data-aos-delay="200">
+            <img src="assets/img/clients/client-4.png" class="img-fluid" alt="">
+          </div>
+
+          <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center" data-aos="zoom-in" data-aos-delay="250">
+            <img src="assets/img/clients/client-5.png" class="img-fluid" alt="">
+          </div>
+
+          <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center" data-aos="zoom-in" data-aos-delay="300">
+            <img src="assets/img/clients/client-6.png" class="img-fluid" alt="">
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Clients Section -->
+
+    <!-- ======= Why Us Section ======= -->
+    <section id="why-us" class="why-us">
+      <div class="container">
+
+        <div class="row">
+          <div class="col-lg-4 d-flex align-items-stretch" data-aos="fade-right">
+            <div class="content">
+              <h3>Why MONITOR ?</h3>
+              <p>
+                Monitor gives you the possibility to visualize the status of your platforms , and performs a test every hour , 24 hours a day , and if a platform breaks down the administrator will receive an alert email .<br>
+                <span style="text-align: center;color: rgb(159, 167, 238)">More features ... see next to this card</span>
+              </p>
+            </div>
+          </div>
+          <div class="col-lg-8 d-flex align-items-stretch">
+            <div class="icon-boxes d-flex flex-column justify-content-center">
+              <div class="row">
+                <div class="col-xl-4 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
+                  <div class="icon-box mt-4 mt-xl-0">
+                    <i class="bx bx-receipt"></i>
+                    <h4>Platforms Management</h4>
+                    <p>Search & Add & Update & Delete</p>
+                  </div>
+                </div>
+                <div class="col-xl-4 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="200">
+                  <div class="icon-box mt-4 mt-xl-0">
+                    <i class="bx bx-cube-alt"></i>
+                    <h4>Administrators Management</h4>
+                    <p>Add & Delete</p>
+                  </div>
+                </div>
+                <div class="col-xl-4 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="300">
+                  <div class="icon-box mt-4 mt-xl-0">
+                    <i class="bx bx-images"></i>
+                    <h4>viewing platforms status</h4>
+                    <p>Work | Does not work</p>
+                  </div>
+                </div>
+              </div>
+            </div><!-- End .content-->
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End Why Us Section -->
+
+
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+
+    <div class="container d-md-flex py-4">
+
+      <div class="me-md-auto text-center text-md-start">
+        <div class="copyright">
+          &copy; Copyright <strong><span>Kadimi</span></strong>. All Rights Reserved
+        </div>
+      </div>
+      <div class="social-links text-center text-md-right pt-3 pt-md-0">
+        <a href="https://twitter.com/fondationtamki1" class="twitter"><i class="bx bxl-twitter"></i></a>
+        <a href="https://www.facebook.com/fondation.tamkine" class="facebook"><i class="bx bxl-facebook"></i></a>
+        <a href="https://www.instagram.com/fondation_tamkine/" class="instagram"><i class="bx bxl-instagram"></i></a>
+        <a href="https://www.linkedin.com/company/la-fondation-tamkine/mycompany/" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+      </div>
+    </div>
+  </footer><!-- End Footer -->
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/purecounter/purecounter.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main2.js"></script>
+
+</body>
+
 </html>

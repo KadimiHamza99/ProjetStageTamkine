@@ -1,5 +1,4 @@
 @extends('layouts.admin')
-
 @section('content')
 
     <h3 style="color: white">{{ __('Create Platform') }}</h3>

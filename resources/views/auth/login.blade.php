@@ -2,7 +2,7 @@
 
 @section('content')
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap" rel="stylesheet">
-<div class="container" style="color: white;font-family:Space Grotesk,'sans-serif';margin-top:9em;margin-bottom:9em" >
+<div class="container" style="color: white;font-family:Space Grotesk,'sans-serif';margin-top:9em;margin-bottom:9em ;" >
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card"  style="background-color: #394965">

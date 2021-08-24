@@ -18,8 +18,9 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <link href="logos/academy.png" rel="icon">
 </head>
-<body style="background-color: #2E3141">
+<body style="background-color: width: 100%;height: 80vh;background: url('assets/img/hero-bg.jpg') center center;background-size: cover;position: relative;">
         <main class="py-4">
             @yield('content')
         </main>

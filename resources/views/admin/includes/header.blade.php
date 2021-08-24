@@ -1,3 +1,4 @@
+<link href="logos/academy.png" rel="icon">
 <header class="app-header"><a href="{{ route('home') }}" style="color: white;text-decoration:none;margin:auto;font-size:15px;padding:5px">
     <img src="https://www.bourse.tamkine.org/images_locale/logo2.png" alt="Logo" width="45">
     Fondation Tamkine</a>

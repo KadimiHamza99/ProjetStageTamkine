@@ -14866,7 +14866,7 @@ be a descendant of the grid when it is being dragged.
   min-height: calc(100vh - 50px);
   margin-top: 50px;
   padding: 30px;
-  background-color: rgba(49, 85, 143, 0.52);
+  background-color: rgba(15, 64, 143, 0.52);
   -webkit-transition: margin-left 0.3s ease;
   -o-transition: margin-left 0.3s ease;
   transition: margin-left 0.3s ease;
