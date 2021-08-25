@@ -86,6 +86,11 @@
             <img src="assets/img/clients/client-5.png" class="img-fluid" alt="">
           </div>
 
+          <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center" data-aos="zoom-in" data-aos-delay="300">
+            <img src="assets/img/clients/client-7.png" class="img-fluid" alt="">
+          </div>
+
+
         </div>
 
       </div>

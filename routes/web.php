@@ -27,6 +27,6 @@ Route::middleware(['auth'])->group(function(){
     Route::get('/live_search', 'App\Http\Controllers\LiveSearch@index')->name('live_search.index');
     Route::get('/live_search/action', 'App\Http\Controllers\LiveSearch@action')->name('live_search.action');
 });
-Auth::routes();
+Auth::routes(['register'=>false]);
 
 //Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
