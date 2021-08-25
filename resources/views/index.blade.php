@@ -23,7 +23,7 @@
 
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
- 
+
   <link href="logos/academy.png" rel="apple-touch-icon">
 
 </head>
@@ -34,11 +34,18 @@
   <header id="header" class="fixed-top d-flex align-items-center">
     <div class="container">
         <div class="logo">
-          <h1 class="text-light" style="text-align: center"><span><img src="logos/academy.png" class="img-responsive" width="40"> Fondation TAMKINE</span></h1>
+          <h1 class="text-light"><img src="logos/academy.png" class="img-responsive"></h1>
           <!-- Uncomment below if you prefer to use an image logo -->
           <!-- <a href="index.html"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
         </div>
       </div><!-- End Header Container -->
+    <nav id="navbar" class="navbar">
+        <ul>
+            <li><a class="nav-link scrollto" href="#contact" style="color: #fff">Contact</a></li>
+            <li><a class="getstarted scrollto" href="{{ route('login') }}">Get Started</a></li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+    </nav><!-- .navbar -->
   </header><!-- End Header -->
 
 
@@ -77,10 +84,6 @@
 
           <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center" data-aos="zoom-in" data-aos-delay="250">
             <img src="assets/img/clients/client-5.png" class="img-fluid" alt="">
-          </div>
-
-          <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center" data-aos="zoom-in" data-aos-delay="300">
-            <img src="assets/img/clients/client-6.png" class="img-fluid" alt="">
           </div>
 
         </div>
@@ -140,13 +143,7 @@
   <!-- ======= Footer ======= -->
   <footer id="footer">
 
-    <div class="container d-md-flex py-4">
-
-      <div class="me-md-auto text-center text-md-start">
-        <div class="copyright">
-          &copy; Copyright <strong><span>Kadimi</span></strong>. All Rights Reserved
-        </div>
-      </div>
+    <div class="container d-md-flex py-4" id="contact">
       <div class="social-links text-center text-md-right pt-3 pt-md-0">
         <a href="https://twitter.com/fondationtamki1" class="twitter"><i class="bx bxl-twitter"></i></a>
         <a href="https://www.facebook.com/fondation.tamkine" class="facebook"><i class="bx bxl-facebook"></i></a>
@@ -155,7 +152,11 @@
       </div>
     </div>
   </footer><!-- End Footer -->
-
+  <div class="me-md-auto text-center text-md-start">
+    <div class="copyright" style="text-align: center;background-color:#1b4994;color:#fff">
+      &copy; Copyright <strong><span>Kadimi</span></strong>. All Rights Reserved
+    </div>
+  </div>
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
   <!-- Vendor JS Files -->

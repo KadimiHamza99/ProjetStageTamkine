@@ -2,7 +2,7 @@
     <aside class="app-sidebar">
         <div class="app-sidebar__user">
             <div>
-                <p class="app-sidebar__user-name">Responsable</p>
+                <p class="app-sidebar__user-name">Welcome {{ Auth::user()->name }}</p>
             </div>
         </div>
         <ul class="app-menu">
