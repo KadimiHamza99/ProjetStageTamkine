@@ -49,7 +49,7 @@
                         </div></a>
                     <div class="property-description" style="background-image: linear-gradient(to bottom, rgba(97, 31, 31, 0.609), rgba(160, 71, 71, 0.904))">
                         <h5> {{ $data->nom }} </h5>
-                        <h6 style="color: #e0b8b8;margin:1.5em auto">Click To Visite Website</h6>
+                        <h6 style="color: #e0b8b8;margin:1.5em auto">Error Code : {{ $data->response_code }}</h6>
                     </div>
                     </div>
                 </div>

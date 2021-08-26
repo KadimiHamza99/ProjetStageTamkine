@@ -19,6 +19,7 @@ class CreatePlatformsTable extends Migration
             $table->string('url');
             $table->boolean('statut');
             $table->string('logo')->nullable();
+            $table->unsignedBigInteger('response_code');
             $table->timestamps();
         });
     }

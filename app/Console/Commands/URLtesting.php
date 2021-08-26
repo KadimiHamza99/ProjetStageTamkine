@@ -50,23 +50,19 @@ class URLtesting extends Command
             foreach($datas as $data){
                 $url=$data->url;
                 $id=$data->id;
-                $ch = curl_init($url);
-                curl_setopt($ch,CURLOPT_CONNECTTIMEOUT,10);
-                curl_setopt($ch,CURLOPT_HEADER,true);
-                curl_setopt($ch,CURLOPT_NOBODY,true);
-                curl_setopt($ch,CURLOPT_RETURNTRANSFER,true);
-                // Récupérer la réponse
+                $ch=curl_init($url);
+                curl_setopt($ch, CURLOPT_URL, $url);
+                curl_setopt($ch, CURLOPT_RETURNTRANSFER, TRUE);
                 $response = curl_exec($ch);
-                // Fermer la session cURL
-                curl_close($ch);
-                if($response==true){
-                    if($data->statut != 1){
-                        $sqls="UPDATE platforms SET statut=1 WHERE id=$id";
+                $responseCode = curl_getinfo($ch, CURLINFO_HTTP_CODE);
+                if($responseCode == 200){
+                    if($data->statut != 1 || $data->response_code != 200){
+                        $sqls="UPDATE `platforms` SET `statut`=1,`response_code`=$responseCode WHERE `id`=$id";
                         mysqli_query($link,$sqls);
                     }
-                }else if($response==false){
-                    if($data->statut != 0){
-                        $sqlf = "UPDATE platforms SET statut=0 WHERE id=$id";
+                }else if($response=false || $responseCode > 399 || $responseCode==0){
+                    if($data->statut != 0 || $data->response_code != $responseCode){
+                        $sqlf = "UPDATE `platforms` SET `statut`=0,`response_code`=$responseCode WHERE `id`=$id";
                         mysqli_query($link,$sqlf);
                         $error=new PlatformsController();
                         $error->warning();
@@ -74,6 +70,5 @@ class URLtesting extends Command
                 }
             }
         }
-
     }
 }

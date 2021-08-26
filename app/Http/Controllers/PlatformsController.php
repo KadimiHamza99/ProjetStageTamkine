@@ -88,14 +88,16 @@ class PlatformsController extends Controller
         curl_setopt($ch,CURLOPT_RETURNTRANSFER,true);
         // Récupérer la réponse
         $response = curl_exec($ch);
-
+        $responseCode = curl_getinfo($ch, CURLINFO_HTTP_CODE);
+        $plat->response_code=$responseCode;
         // Fermer la session cURL
         curl_close($ch);
-        if($response==true){
+        if($responseCode==200){
             $plat->statut=1;
-        }else if($response==false){
+        }else if($response==false || $responseCode>399){
             $plat->statut=0;
         }
+        $plat->response_code=$responseCode;
         $plat->save();
         return redirect(route('platforms.create'));
     }
@@ -154,12 +156,13 @@ class PlatformsController extends Controller
         curl_setopt($ch,CURLOPT_RETURNTRANSFER,true);
         // Récupérer la réponse
         $response = curl_exec($ch);
-
+        $responseCode = curl_getinfo($ch, CURLINFO_HTTP_CODE);
         // Fermer la session cURL
         curl_close($ch);
-        if($response==true){
+        if($responseCode==200){
             $platform->statut=1;
-        }else if($response==false){
+        }else if($response==false || $responseCode>399){
+            $platform->response_code=$responseCode;
             $platform->statut=0;
         }
         $platform->save();

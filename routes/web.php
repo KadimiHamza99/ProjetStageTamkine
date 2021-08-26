@@ -12,6 +12,7 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
+
 Route::get('/','App\Http\Controllers\PlatformsController@index')->name('index');
 Route::get('/warning','App\Http\Controllers\PlatformsController@warning');
 
