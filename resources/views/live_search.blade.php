@@ -13,7 +13,7 @@
                 <tr>
                     <th>NOM</th>
                     <th>URL</th>
-                    <th>STATUT</th>
+                    <th>RESPONSE CODE</th>
                     <th>LOGO</th>
                 </tr>
             </thead>

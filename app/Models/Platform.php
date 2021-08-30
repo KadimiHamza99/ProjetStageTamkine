@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use App\Models\ResponseMessage;
 
 
 class Platform extends Model
@@ -16,4 +17,8 @@ class Platform extends Model
         'logo',
         'response_code'
     ];
+    public function responseMessage()
+    {
+        return $this->belongsTo(ResponseMessage::class);
+    }
 }

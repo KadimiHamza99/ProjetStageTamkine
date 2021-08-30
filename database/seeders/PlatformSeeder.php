@@ -74,3 +74,4 @@ class PlatformSeeder extends Seeder
     //     Platform::insert($platform);
     // }
 }
+

@@ -40,7 +40,7 @@ class LiveSearch extends Controller
         <tr>
             <td>'.$row->nom.'</td>
             <td>'.$row->url.'</td>
-            <td>'.$row->statut.'</td>
+            <td>'.$row->response_message_id.'</td>
             <td><img width="50" src="logos/'.$row->logo.'"</td>
         </tr>
         ';

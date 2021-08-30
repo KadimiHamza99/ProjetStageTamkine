@@ -56,13 +56,13 @@ class URLtesting extends Command
                 $response = curl_exec($ch);
                 $responseCode = curl_getinfo($ch, CURLINFO_HTTP_CODE);
                 if($responseCode == 200){
-                    if($data->statut != 1 || $data->response_code != 200){
-                        $sqls="UPDATE `platforms` SET `statut`=1,`response_code`=$responseCode WHERE `id`=$id";
+                    if($data->statut != 1 || $data->response_message_id != 200){
+                        $sqls="UPDATE `platforms` SET `statut`=1,`response_message_id`=$responseCode WHERE `id`=$id";
                         mysqli_query($link,$sqls);
                     }
                 }else if($response=false || $responseCode > 399 || $responseCode==0){
-                    if($data->statut != 0 || $data->response_code != $responseCode){
-                        $sqlf = "UPDATE `platforms` SET `statut`=0,`response_code`=$responseCode WHERE `id`=$id";
+                    if($data->statut != 0 || $data->response_message_id != $responseCode){
+                        $sqlf = "UPDATE `platforms` SET `statut`=0,`response_message_id`=$responseCode WHERE `id`=$id";
                         mysqli_query($link,$sqlf);
                         $error=new PlatformsController();
                         $error->warning();

@@ -32,7 +32,7 @@
                             </div>
                         </div></a>
                     <div class="property-description" style="background-image: linear-gradient(to bottom, rgba(48, 121, 70, 0.787), rgba(83, 136, 83, 0.698))">
-                        <h5> {{ $data->nom }} </h5>
+                        <h5> </strong>{{ $data->nom }}</strong> </h5>
                         <h6 style="color: #aad3b4;margin:1.5em auto">Click To Visite Website</h6>
                     </div>
                     </div>
@@ -48,10 +48,12 @@
                             </div>
                         </div></a>
                     <div class="property-description" style="background-image: linear-gradient(to bottom, rgba(97, 31, 31, 0.609), rgba(160, 71, 71, 0.904))">
-                        <h5> {{ $data->nom }} </h5>
-                        <h6 style="color: #e0b8b8;margin:1.5em auto">Error Code : {{ $data->response_code }}</h6>
+                        <h5> <strong>{{ $data->nom }}</strong> <br> <span style="color: #e0b8b8">{{ $data->responseMessage->name }}</span> </h5>
+                        <div style="color: #e0b8b8">{{ $data->response_message_id }} <br>
+                        {{ $data->responseMessage->signification }}</div>
                     </div>
                     </div>
+                    {{-- #e0b8b8 --}}
                 </div>
                 @endif
             @endforeach

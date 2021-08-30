@@ -7,6 +7,7 @@ use App\Models\Platform;
 use App\Models\User;
 use Illuminate\Support\Facades\Mail;
 use App\Mail\Warning;
+use App\Models\ResponseMessage;
 
 class PlatformsController extends Controller
 {
@@ -89,7 +90,6 @@ class PlatformsController extends Controller
         // Récupérer la réponse
         $response = curl_exec($ch);
         $responseCode = curl_getinfo($ch, CURLINFO_HTTP_CODE);
-        $plat->response_code=$responseCode;
         // Fermer la session cURL
         curl_close($ch);
         if($responseCode==200){
@@ -97,9 +97,9 @@ class PlatformsController extends Controller
         }else if($response==false || $responseCode>399){
             $plat->statut=0;
         }
-        $plat->response_code=$responseCode;
+        $plat->response_message_id=$responseCode;
         $plat->save();
-        return redirect(route('platforms.create'));
+        return redirect(route('home'));
     }
 
     /**
@@ -162,7 +162,7 @@ class PlatformsController extends Controller
         if($responseCode==200){
             $platform->statut=1;
         }else if($response==false || $responseCode>399){
-            $platform->response_code=$responseCode;
+            $platform->response_message_id=$responseCode;
             $platform->statut=0;
         }
         $platform->save();
@@ -181,4 +181,5 @@ class PlatformsController extends Controller
         $platDelete->destroy($id);
         return redirect(route('listePlatforms'))->with('msg','Plaform Deleted');
     }
+
 }
