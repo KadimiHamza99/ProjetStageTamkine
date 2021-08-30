@@ -10,7 +10,8 @@ class LiveSearch extends Controller
 {
     public function index()
     {
-        return view('live_search');
+        $datas = Platform::all();
+        return view('live_search')->with('datas',$datas);
     }
     public function action(Request $request)
     {

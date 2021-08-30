@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\User;
 use Illuminate\Support\Facades\Hash;
+use App\Models\Platform;
 class ResponsablesController extends Controller
 {
     /**
@@ -25,7 +26,8 @@ class ResponsablesController extends Controller
      */
     public function create()
     {
-        return view('responsables.createResponsable');
+        $datas = Platform::all();
+        return view('responsables.createResponsable')->with('datas',$datas);
     }
 
     /**

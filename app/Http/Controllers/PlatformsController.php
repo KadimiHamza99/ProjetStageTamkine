@@ -36,9 +36,7 @@ class PlatformsController extends Controller
 
     public function index()
     {
-        $datas = Platform::all();
-        $rows = User::all();
-        return view('index',compact('datas','rows'));
+        return view('index');
     }
 
     /**
@@ -48,7 +46,8 @@ class PlatformsController extends Controller
      */
     public function create()
     {
-        return view('platforms.createPlatform');
+        $datas = Platform::all();
+        return view('platforms.createPlatform')->with('datas',$datas);
     }
 
     /**
