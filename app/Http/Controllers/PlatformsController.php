@@ -121,7 +121,9 @@ class PlatformsController extends Controller
     public function edit($id)
     {
         $platform=Platform::find($id);
-        return view('platforms.editplatform')->with('platform',$platform);
+        $datas = Platform::all();
+        return view('platforms.editplatform')->with('platform',$platform)
+                                            ->with('datas',$datas);
     }
 
     /**
